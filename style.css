@@ -1,0 +1,249 @@
+/* Import font moderno: Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary: #2563eb;        /* Blu elettrico moderno */
+    --text-main: #0f172a;      /* Nero/Antracite profondo */
+    --text-muted: #64748b;     /* Grigio elegante */
+    --bg-body: #f8fafc;        /* Sfondo pagina Soft Slate */
+    --bg-card: #ffffff;
+    --border-color: #f1f5f9;   /* Linee divisorie ultra-chiare */
+    --badge-bg: #eff6ff;       /* Sfondo azzurrato tenue */
+}
+
+/* Reset base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    line-height: 1.6;
+    padding: 60px 20px;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout stile "Scheda" Minimal */
+.cv-container {
+    max-width: 780px;
+    margin: 0 auto;
+    background-color: var(--bg-card);
+    padding: 55px 65px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--border-color);
+}
+
+/* Header elegante */
+.cv-header {
+    margin-bottom: 28px;
+}
+
+.europass-logo {
+    display: inline-block;
+    color: var(--primary);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    background-color: var(--badge-bg);
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+}
+
+.candidate-name {
+    color: var(--text-main);
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -0.8px;
+}
+
+/* Info Personali con layout a pillole/badge */
+.personal-info {
+    font-size: 13px;
+    color: var(--text-muted);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 24px;
+    margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.personal-info p {
+    margin: 0;
+}
+
+.personal-info strong {
+    color: var(--text-main);
+    font-weight: 600;
+}
+
+.personal-info a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.personal-info a:hover {
+    color: #1d4ed8;
+    text-decoration: underline;
+}
+
+/* Titoli delle Sezioni */
+.cv-section {
+    margin-bottom: 32px;
+}
+
+.section-title {
+    color: var(--text-main);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.section-title .bullet {
+    display: none; /* Rimosso il pallino vecchio stile per una resa più pulita */
+}
+
+.section-content {
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+.section-content p {
+    line-height: 1.7;
+}
+
+/* Elementi Timeline (Istruzione) */
+.timeline-item {
+    position: relative;
+    padding-left: 20px;
+    border-left: 2px solid var(--border-color);
+    margin-bottom: 24px;
+    transition: border-color 0.2s;
+}
+
+.timeline-item:hover {
+    border-left-color: var(--primary);
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.item-date-location {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.item-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-main);
+    margin-bottom: 2px;
+}
+
+.institution {
+    font-weight: 500;
+    color: var(--text-muted);
+    font-size: 13.5px;
+    margin-bottom: 6px;
+}
+
+.field, .eqf {
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+/* Certificazioni */
+.cert-item {
+    background-color: var(--bg-body);
+    padding: 16px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    border: 1px solid var(--border-color);
+}
+
+.cert-item:last-child {
+    margin-bottom: 0;
+}
+
+.cert-issuer {
+    font-size: 12px;
+    color: var(--text-muted);
+    font-weight: 500;
+    margin-bottom: 2px;
+}
+
+.cert-title {
+    font-size: 14.5px;
+    font-weight: 600;
+    color: var(--text-main);
+    margin-bottom: 6px;
+}
+
+.cert-link {
+    font-size: 12.5px;
+}
+
+.cert-link a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.cert-link a:hover {
+    text-decoration: underline;
+}
+
+/* Competenze */
+.skills-list {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-muted);
+    line-height: 2;
+    letter-spacing: 0.5px;
+}
+
+/* Footer Privacy */
+.privacy-footer {
+    margin-top: 45px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+    font-size: 11px;
+    color: #94a3b8;
+    line-height: 1.6;
+}
+
+/* Ottimizzazione per la stampa/PDF */
+@media print {
+    body {
+        background-color: #fff;
+        padding: 0;
+    }
+    .cv-container {
+        box-shadow: none;
+        border: none;
+        padding: 0;
+        max-width: 100%;
+    }
+    .cert-item {
+        border: 1px solid #e2e8f0;
+        background-color: #fff;
+    }
+}
